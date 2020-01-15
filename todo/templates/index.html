@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href='add/' class='btn btn-info'>Add TODO</a>
+<br>
+<br>
+<table class='table table-bordered table-condense'>
+    <tr><th>Rec</th><th>Item</th></tr>
+    {% for x in qry %}
+    <tr></tr><td>{{x.seq}}</td> <td>{{x.item}}</td></tr>
+    {% endfor  %}
+    
+</table>
+
+{% endblock %}
+
